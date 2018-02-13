@@ -28,7 +28,8 @@ import (
     "strings"
 
     "golang.org/x/crypto/ssh"
-    "github.com/scionproto/scion/go/scion-ssh/scionutils"
+    
+    "github.com/xabarass/scion-ssh/scionutils"
 )
 
 // See the sshd manpage

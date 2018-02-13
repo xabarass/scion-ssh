@@ -5,12 +5,13 @@ import (
 
 	"gopkg.in/alecthomas/kingpin.v2"
 
-	"github.com/scionproto/scion/go/scion-ssh/scionutils"
 	"github.com/scionproto/scion/go/lib/snet"
 	"github.com/scionproto/scion/go/lib/snet/squic"
-	"github.com/scionproto/scion/go/scion-ssh/sshserver/config"
-	"github.com/scionproto/scion/go/scion-ssh/sshserver/ssh"
-	"github.com/scionproto/scion/go/scion-ssh/quicconn"
+
+	"github.com/xabarass/scion-ssh/sshserver/config"
+	"github.com/xabarass/scion-ssh/sshserver/ssh"
+	"github.com/xabarass/scion-ssh/quicconn"
+	"github.com/xabarass/scion-ssh/scionutils"
 )
 
 const (

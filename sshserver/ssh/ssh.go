@@ -8,7 +8,7 @@ import(
 
     "golang.org/x/crypto/ssh"
 
-    "github.com/scionproto/scion/go/scion-ssh/sshserver/config"
+    "github.com/xabarass/scion-ssh/sshserver/config"
 )
 
 type ChannelHandlerFunction func(newChannel ssh.NewChannel)

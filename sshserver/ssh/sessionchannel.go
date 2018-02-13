@@ -2,13 +2,13 @@ package ssh
 
 import(
     "log"
-        "os/exec"
-        "github.com/kr/pty"
-        "sync"
-        "io"
-        "syscall"
-        "encoding/binary"
-        "unsafe"
+    "os/exec"
+    "github.com/kr/pty"
+    "sync"
+    "io"
+    "syscall"
+    "encoding/binary"
+    "unsafe"
     
     "golang.org/x/crypto/ssh"
 )

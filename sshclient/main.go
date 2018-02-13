@@ -8,12 +8,13 @@ import (
     "golang.org/x/crypto/ssh/terminal"
 
     "gopkg.in/alecthomas/kingpin.v2"
-
-    "github.com/scionproto/scion/go/scion-ssh/quicconn"
-    "github.com/scionproto/scion/go/scion-ssh/scionutils"
+    
     "github.com/scionproto/scion/go/lib/snet/squic"
     "github.com/scionproto/scion/go/lib/snet"
-    "github.com/scionproto/scion/go/scion-ssh/sshclient/ssh"
+
+    "github.com/xabarass/scion-ssh/sshclient/ssh"
+    "github.com/xabarass/scion-ssh/quicconn"
+    "github.com/xabarass/scion-ssh/scionutils"
 )
 
 const (
