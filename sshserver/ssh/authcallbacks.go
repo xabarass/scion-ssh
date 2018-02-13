@@ -8,8 +8,7 @@ import(
 
 func (s *SSHServer)PasswordAuth(c ssh.ConnMetadata, pass []byte) (*ssh.Permissions, error) {
     //TODO: Implement me!
-    // return nil, fmt.Errorf("Password authentication not yet implemented!")
-    return nil, nil
+    return nil, fmt.Errorf("Password authentication not yet implemented!")
 }
 
 func (s *SSHServer)PublicKeyAuth(c ssh.ConnMetadata, pubKey ssh.PublicKey) (*ssh.Permissions, error) {

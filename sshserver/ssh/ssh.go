@@ -21,6 +21,40 @@ type SSHServer struct {
     channelHandlers map[string]ChannelHandlerFunction
 }
 
+func Create(config *config.ServerConfig, version string)(*SSHServer, error){
+    server := &SSHServer{
+        authorizedKeys:make(map[string]bool),
+        channelHandlers:make(map[string]ChannelHandlerFunction),
+    }
+
+    err := loadAuthorizedKeys(config.AuthorizedKeysFile, server)
+    if err != nil {
+        return nil, fmt.Errorf("Failed loading authorized files: %v", err)
+    }
+
+    server.configuration=&ssh.ServerConfig{
+        PasswordCallback:server.PasswordAuth,
+        PublicKeyCallback:server.PublicKeyAuth,
+        NoClientAuth : config.AllowNoAuth,
+        MaxAuthTries: config.MaxAuthTries,
+        // ServerVersion: fmt.Sprintf("SCION-ssh-server-v%s", version),
+    }
+
+    privateBytes, err := ioutil.ReadFile(config.SSHKeyPath)
+    if err != nil {
+        return nil, fmt.Errorf("Failed loading private key: %v", err)
+    }
+    private, err := ssh.ParsePrivateKey(privateBytes)
+    if err != nil {
+        return nil, fmt.Errorf("Failed parsing private key: %v", err)
+    }
+    server.configuration.AddHostKey(private)
+
+    server.channelHandlers["session"]=handleSession
+
+    return server, nil
+}
+
 func loadAuthorizedKeys(file string, server *SSHServer)(error){
     authorizedKeysBytes, err := ioutil.ReadFile(file)
     if err != nil {
@@ -38,40 +72,6 @@ func loadAuthorizedKeys(file string, server *SSHServer)(error){
     }
 
     return nil
-}
-
-func Create(config *config.ServerConfig, version string)(*SSHServer, error){
-    server := &SSHServer{
-        authorizedKeys:make(map[string]bool),
-        channelHandlers:make(map[string]ChannelHandlerFunction),
-    }
-
-    err := loadAuthorizedKeys(config.AuthorizedKeysFile, server)
-    if err != nil {
-        return nil, fmt.Errorf("Failed loading authorized files: %v", err)
-    }
-
-    server.configuration=&ssh.ServerConfig{
-        PasswordCallback:server.PasswordAuth,
-        PublicKeyCallback:server.PublicKeyAuth,
-        NoClientAuth : config.AllowNoAuth,
-        MaxAuthTries: config.MaxAuthTries,
-        ServerVersion: fmt.Sprintf("SCION-ssh-server-v%s", version),
-    }
-
-    privateBytes, err := ioutil.ReadFile(config.SSHKeyPath)
-    if err != nil {
-        return nil, fmt.Errorf("Failed loading private key: %v", err)
-    }
-    private, err := ssh.ParsePrivateKey(privateBytes)
-    if err != nil {
-        return nil, fmt.Errorf("Failed parsing private key: %v", err)
-    }
-    server.configuration.AddHostKey(private)
-
-    server.channelHandlers["session"]=handleSession
-
-    return server, nil
 }
 
 func (s *SSHServer)handleChannels(chans <-chan ssh.NewChannel) {
