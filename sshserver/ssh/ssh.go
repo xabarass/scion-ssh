@@ -36,7 +36,7 @@ func Create(config *config.ServerConfig, version string)(*SSHServer, error){
         PasswordCallback:server.PasswordAuth,
         PublicKeyCallback:server.PublicKeyAuth,
         NoClientAuth : config.AllowNoAuth,
-        MaxAuthTries: config.MaxAuthTries,
+        MaxAuthTries: 3,
         // ServerVersion: fmt.Sprintf("SCION-ssh-server-v%s", version),
     }
 
@@ -91,9 +91,11 @@ func (s *SSHServer)handleChannel(newChannel ssh.NewChannel){
 }
 
 func (s *SSHServer)HandleConnection(conn net.Conn)(error){
+    log.Printf("Handling new connection")
     sshConn, chans, reqs, err := ssh.NewServerConn(conn, s.configuration)
     if err != nil {
         log.Printf("Failed to create new connection (%s)", err)
+        conn.Close()
         return err
     }
 
@@ -101,7 +103,7 @@ func (s *SSHServer)HandleConnection(conn net.Conn)(error){
     // Discard all global out-of-band Requests
     go ssh.DiscardRequests(reqs)
     // Accept all channels
-    go s.handleChannels(chans)
+    s.handleChannels(chans)
 
     return nil
 }

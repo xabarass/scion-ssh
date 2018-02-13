@@ -4,6 +4,8 @@ import (
     "log"
     "net"
     "fmt"
+    "path"
+    "os/user"
 
     "golang.org/x/crypto/ssh/terminal"
 
@@ -28,7 +30,9 @@ var (
 
     //TODO: additional file paths
     KNOWN_HOSTS_FILE = kingpin.Flag("known_hosts", "File where known hosts are stored").Default("known_hosts").String()
-    IDENTITY_FILE = kingpin.Flag("identity", "Identity (private key) file").Default("id_rsa").String()
+    IDENTITY_FILE = kingpin.Flag("identity", "Identity (private key) file").String()
+
+    USER = kingpin.Flag("user", "Username to authenticate with").String()
 )
 
 func initSCIONConnection(serverAddress, clientAddress string)(*snet.Addr, *snet.Addr, error){
@@ -73,6 +77,19 @@ func PromptAcceptHostKey(hostname string, remote net.Addr, publicKey string)(boo
 func main(){
     kingpin.Parse()
 
+    curentUser:="nobody"
+    privateKeyFile:="id_rsa"
+    if u, err := user.Current(); err==nil{
+        curentUser=u.Username
+        privateKeyFile=path.Join(u.HomeDir,".ssh", "id_rsa")
+    }
+    if(*USER!=""){
+        curentUser=*USER   
+    }
+    if(*IDENTITY_FILE!=""){
+        privateKeyFile=*IDENTITY_FILE
+    }
+
     // Initialize SCION library
     serverCCAddr, clientCCAddr, err := initSCIONConnection(*SERVER_ADDRESS, *CLIENT_ADDRESS)
     if err != nil {
@@ -96,14 +113,14 @@ func main(){
         VerifyNewKeyHandler:PromptAcceptHostKey,
         KnownHostKeyFile:*KNOWN_HOSTS_FILE,
 
-        UsePasswordAuth:false,
+        UsePasswordAuth:true,
         PassAuthHandler: PromptPassword,
 
         UsePublicKeyAuth: true,
-        PrivateKeyPath: *IDENTITY_FILE,
+        PrivateKeyPath: privateKeyFile,
     }
 
-    sshClient, err := ssh.Create("milan", VERSION, sshConfig)
+    sshClient, err := ssh.Create(curentUser, VERSION, sshConfig)
     if err!= nil{
         log.Panicf("Error creating ssh client %s", err)
     }

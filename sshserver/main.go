@@ -86,7 +86,6 @@ func main() {
 		}
 		
 	    qc := &quicconn.QuicConn{Session:sess, Stream:stream}
-
-	    sshServer.HandleConnection(qc)
+	    go sshServer.HandleConnection(qc)
 	}
 }
