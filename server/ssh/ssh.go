@@ -2,7 +2,6 @@ package ssh
 
 import(
     "fmt"
-    "io/ioutil"
     "net"
     "log"
 
@@ -14,7 +13,7 @@ import(
 type ChannelHandlerFunction func(newChannel ssh.NewChannel)
 
 type SSHServer struct {
-    authorizedKeys map[string]bool
+    authorizedKeysFile string
 
     configuration *ssh.ServerConfig
 
@@ -23,13 +22,8 @@ type SSHServer struct {
 
 func Create(config *config.ServerConfig, version string)(*SSHServer, error){
     server := &SSHServer{
-        authorizedKeys:make(map[string]bool),
+        authorizedKeysFile:config.AuthorizedKeysFile,
         channelHandlers:make(map[string]ChannelHandlerFunction),
-    }
-
-    err := loadAuthorizedKeys(config.AuthorizedKeysFile, server)
-    if err != nil {
-        return nil, fmt.Errorf("Failed loading authorized files: %v", err)
     }
 
     server.configuration=&ssh.ServerConfig{
@@ -53,25 +47,6 @@ func Create(config *config.ServerConfig, version string)(*SSHServer, error){
     server.channelHandlers["session"]=handleSession
 
     return server, nil
-}
-
-func loadAuthorizedKeys(file string, server *SSHServer)(error){
-    authorizedKeysBytes, err := ioutil.ReadFile(file)
-    if err != nil {
-        return err
-    }
-
-    for len(authorizedKeysBytes) > 0 {
-        pubKey, _, _, rest, err := ssh.ParseAuthorizedKey(authorizedKeysBytes)
-        if err != nil {
-            return err
-        }
-
-        server.authorizedKeys[string(pubKey.Marshal())] = true
-        authorizedKeysBytes = rest
-    }
-
-    return nil
 }
 
 func (s *SSHServer)handleChannels(chans <-chan ssh.NewChannel) {
