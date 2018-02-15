@@ -1,9 +1,9 @@
 [connection]
-tls_cert = "/home/milan/go/src/github.com/scionproto/scion/go/scion-ssh/certificate.pem"
-tls_key = "/home/milan/go/src/github.com/scionproto/scion/go/scion-ssh/key.pem"
+tls_cert = "./certificate.pem"
+tls_key = "./key.pem"
 
 [server]
-ssh_key_path = "/home/milan/go/src/github.com/scionproto/scion/go/scion-ssh/id_rsa"
+ssh_key_path = "./id_rsa"
 no_client_auth = false
 password_auth = true
 max_auth_tries = 3
