@@ -8,8 +8,8 @@ import (
 	"github.com/scionproto/scion/go/lib/snet"
 	"github.com/scionproto/scion/go/lib/snet/squic"
 
-	"github.com/xabarass/scion-ssh/sshserver/config"
-	"github.com/xabarass/scion-ssh/sshserver/ssh"
+	"github.com/xabarass/scion-ssh/server/config"
+	"github.com/xabarass/scion-ssh/server/ssh"
 	"github.com/xabarass/scion-ssh/quicconn"
 	"github.com/xabarass/scion-ssh/scionutils"
 )

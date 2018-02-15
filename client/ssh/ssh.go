@@ -11,7 +11,7 @@ import(
     "golang.org/x/crypto/ssh"
 
     // knownhosts doesn't support SCION address format, so i had to change it
-    "github.com/xabarass/scion-ssh/sshclient/ssh/knownhosts"
+    "github.com/xabarass/scion-ssh/client/ssh/knownhosts"
 )
 
 type AuthenticationHandler func() (secret string, err error)

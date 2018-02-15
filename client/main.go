@@ -14,7 +14,7 @@ import (
     "github.com/scionproto/scion/go/lib/snet/squic"
     "github.com/scionproto/scion/go/lib/snet"
 
-    "github.com/xabarass/scion-ssh/sshclient/ssh"
+    "github.com/xabarass/scion-ssh/client/ssh"
     "github.com/xabarass/scion-ssh/quicconn"
     "github.com/xabarass/scion-ssh/scionutils"
 )
