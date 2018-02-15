@@ -4,6 +4,7 @@ import(
     "fmt"
     "net"
     "log"
+    "io/ioutil"
 
     "golang.org/x/crypto/ssh"
 

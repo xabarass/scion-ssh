@@ -24,35 +24,45 @@
 		},
 		{
 			"checksumSHA1": "KmjnydoAbofMieIWm+it5OWERaM=",
+			"origin": "gopkg.in/alecthomas/kingpin.v2/vendor/github.com/alecthomas/template",
 			"path": "github.com/alecthomas/template",
-			"revision": "a0175ee3bccc567396460bf5acd36800cb10c49c",
-			"revisionTime": "2016-04-05T07:15:01Z"
+			"revision": "1087e65c9441605df944fb12c33f0fe7072d18ca",
+			"revisionTime": "2017-07-27T04:22:29Z"
 		},
 		{
 			"checksumSHA1": "3wt0pTXXeS+S93unwhGoLIyGX/Q=",
+			"origin": "gopkg.in/alecthomas/kingpin.v2/vendor/github.com/alecthomas/template/parse",
 			"path": "github.com/alecthomas/template/parse",
-			"revision": "a0175ee3bccc567396460bf5acd36800cb10c49c",
-			"revisionTime": "2016-04-05T07:15:01Z"
+			"revision": "1087e65c9441605df944fb12c33f0fe7072d18ca",
+			"revisionTime": "2017-07-27T04:22:29Z"
 		},
 		{
 			"checksumSHA1": "fCc3grA7vIxfBru7R3SqjcW+oLI=",
+			"origin": "gopkg.in/alecthomas/kingpin.v2/vendor/github.com/alecthomas/units",
 			"path": "github.com/alecthomas/units",
-			"revision": "2efee857e7cfd4f3d0138cc3cbb1b4966962b93a",
-			"revisionTime": "2015-10-22T06:55:26Z"
+			"revision": "1087e65c9441605df944fb12c33f0fe7072d18ca",
+			"revisionTime": "2017-07-27T04:22:29Z"
 		},
 		{
-			"checksumSHA1": "7wknjQuGJ8gr8VsM8cTLgu1M8vw=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/bifurcation/mint",
+			"checksumSHA1": "8nsuzBKJY9oVNM/NPU0kbY/YpDw=",
+			"origin": "github.com/lucas-clemente/quic-go/vendor/github.com/bifurcation/mint",
 			"path": "github.com/bifurcation/mint",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
 			"checksumSHA1": "PZNcjO1c9gV/LZzppwpVRl6+QAY=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/bifurcation/mint/syntax",
+			"origin": "github.com/lucas-clemente/quic-go/vendor/github.com/bifurcation/mint/syntax",
 			"path": "github.com/bifurcation/mint/syntax",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
+		},
+		{
+			"checksumSHA1": "PYXuf7wvcj492uWhjvmXlyyQUYc=",
+			"origin": "github.com/lucas-clemente/quic-go/vendor/github.com/cheekybits/genny/generic",
+			"path": "github.com/cheekybits/genny/generic",
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
 			"checksumSHA1": "aMwr5c9Dy2gRQrypsrTCoDVDi/8=",
@@ -111,18 +121,16 @@
 			"revisionTime": "2018-02-05T16:59:49Z"
 		},
 		{
-			"checksumSHA1": "d9PxF1XQGLMJZRct2R8qVM/eYlE=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/hashicorp/golang-lru",
+			"checksumSHA1": "UquR8kc0nKU285HwLbkievlLQz4=",
 			"path": "github.com/hashicorp/golang-lru",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "0fb14efe8c47ae851c0034ed7a448854d3d34cf3",
+			"revisionTime": "2018-02-01T23:52:37Z"
 		},
 		{
-			"checksumSHA1": "9hffs0bAIU6CquiRhKQdzjHnKt0=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/hashicorp/golang-lru/simplelru",
+			"checksumSHA1": "8Z637dcPkbR5HdLQQBp/9jTbx9Y=",
 			"path": "github.com/hashicorp/golang-lru/simplelru",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "0fb14efe8c47ae851c0034ed7a448854d3d34cf3",
+			"revisionTime": "2018-02-01T23:52:37Z"
 		},
 		{
 			"checksumSHA1": "S1lxMekj2Rxqp/lA47z9UGeNHjs=",
@@ -153,31 +161,27 @@
 		},
 		{
 			"checksumSHA1": "2RFzGcdTeQrFkkhT70WhQcMWF6c=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/aes12",
 			"path": "github.com/lucas-clemente/aes12",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "cd47fb39b79f867c6e4e5cd39cf7abd799f71670",
+			"revisionTime": "2017-10-27T16:34:21Z"
 		},
 		{
 			"checksumSHA1": "ne1X+frkx5fJcpz9FaZPuUZ7amM=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/fnv128a",
 			"path": "github.com/lucas-clemente/fnv128a",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "393af48d391698c6ae4219566bfbdfef67269997",
+			"revisionTime": "2016-05-04T15:23:51Z"
 		},
 		{
-			"checksumSHA1": "O9BCxwHi0Y0iYjZYD7SkGe0cjY0=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go",
+			"checksumSHA1": "i+mWlLZvBV2uS1V8sQo0YBDs34A=",
 			"path": "github.com/lucas-clemente/quic-go",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
 			"checksumSHA1": "OA9E+y7g05x/mWJJHmA7oPxWKQo=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go-certificates",
 			"path": "github.com/lucas-clemente/quic-go-certificates",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d2f86524cced5186554df90d92529757d22c1cb6",
+			"revisionTime": "2016-08-23T09:51:56Z"
 		},
 		{
 			"checksumSHA1": "ly+Jnp9L2/tZnCH/JLjo6x1XEO8=",
@@ -194,53 +198,58 @@
 			"revisionTime": "2018-02-05T16:59:49Z"
 		},
 		{
-			"checksumSHA1": "Nod9iZCew4XEWOtK7008B6PPNa8=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go/internal/crypto",
+			"checksumSHA1": "VNSKOwwCBG+E8F/plsz6fSnxM+0=",
+			"path": "github.com/lucas-clemente/quic-go/internal/ackhandler",
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
+		},
+		{
+			"checksumSHA1": "fgR0+53I1EVdnNitOUoBSfvrs8Q=",
+			"path": "github.com/lucas-clemente/quic-go/internal/congestion",
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
+		},
+		{
+			"checksumSHA1": "KuWMHAidiXdMMwoBom4CE6yhrPM=",
 			"path": "github.com/lucas-clemente/quic-go/internal/crypto",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
-			"checksumSHA1": "w+Tez/nWPqzt4R3qGF2Yfw0eswU=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go/internal/flowcontrol",
+			"checksumSHA1": "ruhHXEvJ1rJKekXb9nv5h1jmYa0=",
 			"path": "github.com/lucas-clemente/quic-go/internal/flowcontrol",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
-			"checksumSHA1": "kGh1OYfUamQrE32YzeRZJyWvnhU=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go/internal/handshake",
+			"checksumSHA1": "XPAmDu25V4E0KKRELggMgNg6AgU=",
 			"path": "github.com/lucas-clemente/quic-go/internal/handshake",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
-			"checksumSHA1": "FHefA0nAsT8tJpFK5wUCi0tsL5w=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go/internal/protocol",
+			"checksumSHA1": "IUc84KOO1BWYupRDuFYDVt1zW+0=",
 			"path": "github.com/lucas-clemente/quic-go/internal/protocol",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
-			"checksumSHA1": "vCZjWwNZq8dsS3YCSnDLv553VfI=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go/internal/utils",
+			"checksumSHA1": "FReK8p2Dsl4zqNqycUo63n7Rqb8=",
 			"path": "github.com/lucas-clemente/quic-go/internal/utils",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
-			"checksumSHA1": "dGwcTMV/AOdJU6IXMJsEcuX6O04=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go/internal/wire",
+			"checksumSHA1": "/pV53NDK6TREIyMnFMV2kkrmL2U=",
 			"path": "github.com/lucas-clemente/quic-go/internal/wire",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
-			"checksumSHA1": "RaG0jfP+lFzgedW98Bfp0Uri7EY=",
-			"origin": "github.com/scionproto/scion/go/vendor/github.com/lucas-clemente/quic-go/qerr",
+			"checksumSHA1": "RirV1NpsmXre67vYhtE5rzEoHOo=",
 			"path": "github.com/lucas-clemente/quic-go/qerr",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
 			"checksumSHA1": "ugnSryGF6VPBb5s87QgoRH6730g=",
@@ -378,7 +387,7 @@
 			"revisionTime": "2018-02-05T16:59:49Z"
 		},
 		{
-			"checksumSHA1": "tsSaNN2xSn9ES6a1ZjKuVNlWISs=",
+			"checksumSHA1": "ILfnkxMEHXcBbdavH1m6goEd8wg=",
 			"path": "github.com/scionproto/scion/go/proto",
 			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
 			"revisionTime": "2018-02-05T16:59:49Z"
@@ -410,10 +419,10 @@
 		},
 		{
 			"checksumSHA1": "4D8hxMIaSDEW5pCQk22Xj4DcDh4=",
-			"origin": "github.com/scionproto/scion/go/vendor/golang.org/x/crypto/hkdf",
+			"origin": "github.com/lucas-clemente/quic-go/vendor/golang.org/x/crypto/hkdf",
 			"path": "golang.org/x/crypto/hkdf",
-			"revision": "249036ce6f1063d7526699756e9c1d646acecc2e",
-			"revisionTime": "2018-02-05T16:59:49Z"
+			"revision": "d71850eb2ff581620f2f5742b558a97de22c13f6",
+			"revisionTime": "2018-02-06T16:32:15Z"
 		},
 		{
 			"checksumSHA1": "hfABw6DX9B4Ma+88qDDGz9qY45s=",
@@ -461,26 +470,26 @@
 		{
 			"checksumSHA1": "AsL/fTkY1p1HNVSikhVZJd++Nrk=",
 			"path": "golang.org/x/tools/go/ast/astutil",
-			"revision": "f05340fad48926594a3c17968f98ffc30e075b59",
-			"revisionTime": "2018-02-12T22:11:11Z"
+			"revision": "ce871d178848e3eea1e8795e5cfb74053dde4bb9",
+			"revisionTime": "2018-02-14T13:06:10Z"
 		},
 		{
 			"checksumSHA1": "o6uoZozSLnj3Ph+hj399ZPqJYhE=",
 			"path": "golang.org/x/tools/go/gcimporter15",
-			"revision": "f05340fad48926594a3c17968f98ffc30e075b59",
-			"revisionTime": "2018-02-12T22:11:11Z"
+			"revision": "ce871d178848e3eea1e8795e5cfb74053dde4bb9",
+			"revisionTime": "2018-02-14T13:06:10Z"
 		},
 		{
-			"checksumSHA1": "QiFtcym1bq3DolQ7k/rq6G51Hc0=",
+			"checksumSHA1": "R2SJpIm8AWEcuz55qoeQuVw5jVs=",
 			"path": "golang.org/x/tools/imports",
-			"revision": "f05340fad48926594a3c17968f98ffc30e075b59",
-			"revisionTime": "2018-02-12T22:11:11Z"
+			"revision": "ce871d178848e3eea1e8795e5cfb74053dde4bb9",
+			"revisionTime": "2018-02-14T13:06:10Z"
 		},
 		{
-			"checksumSHA1": "sToCp8GThnMnsBzsHv+L/tBYQrQ=",
+			"checksumSHA1": "3SZTatHIy9OTKc95YlVfXKnoySg=",
 			"path": "gopkg.in/alecthomas/kingpin.v2",
-			"revision": "947dcec5ba9c011838740e680966fd7087a71d0d",
-			"revisionTime": "2017-12-17T18:08:21Z"
+			"revision": "1087e65c9441605df944fb12c33f0fe7072d18ca",
+			"revisionTime": "2017-07-27T04:22:29Z"
 		},
 		{
 			"checksumSHA1": "dsQ5n+qfjPnd1P5wA0y9LSwbs4A=",
