@@ -8,6 +8,11 @@ SSH client and server running over SCION network.
 
 SCION infrastructure has to be installed and running. Instructions can be found [here](https://github.com/scionproto/scion)
 
+Additional development library for PAM is needed:
+```
+sudo apt-get install libpam0g-dev
+```
+
 ## Building the project
 
 Clone the `scion-ssh` repository and install dependencies:

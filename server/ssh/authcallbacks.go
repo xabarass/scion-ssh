@@ -5,16 +5,27 @@ import(
     "io/ioutil"
 
     "golang.org/x/crypto/ssh"
+
+    "github.com/msteinert/pam"
 )
 
 func (s *SSHServer)PasswordAuth(c ssh.ConnMetadata, pass []byte) (*ssh.Permissions, error) {
-    //TODO: Implement me!
-    if(string(pass)=="scion"){
-        return nil, nil
-    }else{
-        return nil, fmt.Errorf("Password authentication not yet implemented!")    
+    t, err := pam.StartFunc("", c.User(), func(s pam.Style, msg string) (string, error) {
+        switch s {
+        case pam.PromptEchoOff:
+            return string(pass), nil
+        }
+        return "", fmt.Errorf("Unsupported message style")
+    })
+    if err != nil {
+        return nil, err
+    }
+    err = t.Authenticate(0)
+    if err != nil {
+        return nil, fmt.Errorf("Authenticate: %s", err.Error())
     }
     
+    return nil, nil
 }
 
 func loadAuthorizedKeys(file string)(map[string]bool, error){
