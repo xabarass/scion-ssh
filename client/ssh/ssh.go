@@ -53,11 +53,11 @@ func Create(username, version string, config *SSHClientConfig) (*SSHClient, erro
     // Load client private key
     if config.UsePublicKeyAuth {
         am, err := loadPrivateKey(config.PrivateKeyPath)
-        if err!=nil {
-            return nil, err
+        if err != nil {
+            log.Printf("Error loading private key, skipping authentication step")
+        }else{
+            authMethods=append(authMethods, am)    
         }
-
-        authMethods=append(authMethods, am)
     }
 
     // Use password auth
